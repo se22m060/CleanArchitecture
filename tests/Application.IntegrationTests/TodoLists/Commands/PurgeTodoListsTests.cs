@@ -27,8 +27,6 @@ public class PurgeTodoListsTests : BaseTestFixture
     [Test]
     public async Task ShouldDenyNonAdministrator()
     {
-        await RunAsDefaultUserAsync();
-
         var command = new PurgeTodoListsCommand();
 
         var action = () => SendAsync(command);
@@ -39,8 +37,6 @@ public class PurgeTodoListsTests : BaseTestFixture
     [Test]
     public async Task ShouldAllowAdministrator()
     {
-        await RunAsAdministratorAsync();
-
         var command = new PurgeTodoListsCommand();
 
         var action = () => SendAsync(command);
@@ -51,8 +47,6 @@ public class PurgeTodoListsTests : BaseTestFixture
     [Test]
     public async Task ShouldDeleteAllLists()
     {
-        await RunAsAdministratorAsync();
-
         await SendAsync(new CreateTodoListCommand
         {
             Title = "New List #1"

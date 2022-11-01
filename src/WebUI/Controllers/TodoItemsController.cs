@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace se22m060_swe_ca.WebUI.Controllers;
 
-[Authorize]
+[AllowAnonymous]
 public class TodoItemsController : ApiControllerBase
 {
     [HttpGet]

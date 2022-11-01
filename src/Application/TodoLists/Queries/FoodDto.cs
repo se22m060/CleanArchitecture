@@ -1,5 +1,4 @@
 ﻿using System.Runtime.Serialization;
-using se22m060_swe_ca.Domain.Common;
 
 namespace se22m060_swe_ca.Application.TodoLists.Queries.GetTodos;
 

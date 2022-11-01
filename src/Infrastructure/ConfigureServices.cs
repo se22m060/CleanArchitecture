@@ -1,11 +1,8 @@
 ﻿using se22m060_swe_ca.Application.Common.Interfaces;
 using se22m060_swe_ca.Infrastructure.Files;
-using se22m060_swe_ca.Infrastructure.Identity;
 using se22m060_swe_ca.Infrastructure.Persistence;
 using se22m060_swe_ca.Infrastructure.Persistence.Interceptors;
 using se22m060_swe_ca.Infrastructure.Services;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
@@ -33,16 +30,9 @@ public static class ConfigureServices
 
         services.AddScoped<ApplicationDbContextInitialiser>();
 
-        services
-            .AddDefaultIdentity<ApplicationUser>()
-            .AddRoles<IdentityRole>()
-            .AddEntityFrameworkStores<ApplicationDbContext>();
-
-        services.AddIdentityServer()
-            .AddApiAuthorization<ApplicationUser, ApplicationDbContext>();
 
         services.AddTransient<IDateTime, DateTimeService>();
-        services.AddTransient<IIdentityService, IdentityService>();
+        //services.AddTransient<IIdentityService, IdentityService>();
         services.AddTransient<ICsvFileBuilder, CsvFileBuilder>();
 
         services.AddAuthentication(options =>

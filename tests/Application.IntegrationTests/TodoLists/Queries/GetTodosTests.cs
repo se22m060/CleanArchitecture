@@ -13,8 +13,6 @@ public class GetTodosTests : BaseTestFixture
     [Test]
     public async Task ShouldReturnPriorityLevels()
     {
-        await RunAsDefaultUserAsync();
-
         var query = new GetTodosQuery();
 
         var result = await SendAsync(query);
@@ -25,8 +23,6 @@ public class GetTodosTests : BaseTestFixture
     [Test]
     public async Task ShouldReturnAllListsAndItems()
     {
-        await RunAsDefaultUserAsync();
-
         await AddAsync(new TodoList
         {
             Title = "Shopping",
