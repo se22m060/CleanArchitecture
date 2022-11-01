@@ -22,7 +22,7 @@ public static class ConfigureServices
         else
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"),
+                options.UseSqlServer(configuration.GetConnectionString("sqlserver"),
                     builder => builder.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
         }
 

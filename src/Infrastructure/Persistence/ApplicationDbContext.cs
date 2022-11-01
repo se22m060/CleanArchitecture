@@ -19,6 +19,8 @@ public class ApplicationDbContext : DbContext, IApplicationDbContext
         AuditableEntitySaveChangesInterceptor auditableEntitySaveChangesInterceptor) 
         : base(options)
     {
+        this.Database.EnsureCreated();
+
         _mediator = mediator;
         _auditableEntitySaveChangesInterceptor = auditableEntitySaveChangesInterceptor;
     }
@@ -26,8 +28,6 @@ public class ApplicationDbContext : DbContext, IApplicationDbContext
     public DbSet<TodoList> TodoLists => Set<TodoList>();
 
     public DbSet<TodoItem> TodoItems => Set<TodoItem>();
-
-    public DbSet<Food> FoodItems => Set<Food>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

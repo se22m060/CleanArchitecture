@@ -10,7 +10,5 @@ public interface IApplicationDbContext
 
     DbSet<TodoItem> TodoItems { get; }
 
-    DbSet<Food> FoodItems { get; }
-
     Task<int> SaveChangesAsync(CancellationToken cancellationToken);
 }
