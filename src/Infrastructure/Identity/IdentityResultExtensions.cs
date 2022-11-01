@@ -1,7 +1,7 @@
-﻿using CleanArchitecture.Application.Common.Models;
+﻿using se22m060_swe_ca.Application.Common.Models;
 using Microsoft.AspNetCore.Identity;
 
-namespace CleanArchitecture.Infrastructure.Identity;
+namespace se22m060_swe_ca.Infrastructure.Identity;
 
 public static class IdentityResultExtensions
 {

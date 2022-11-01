@@ -1,15 +1,16 @@
 ﻿using System.Reflection;
-using CleanArchitecture.Application.Common.Interfaces;
-using CleanArchitecture.Domain.Entities;
-using CleanArchitecture.Infrastructure.Identity;
-using CleanArchitecture.Infrastructure.Persistence.Interceptors;
+using se22m060_swe_ca.Application.Common.Interfaces;
+using se22m060_swe_ca.Domain.Entities;
+using se22m060_swe_ca.Infrastructure.Identity;
+using se22m060_swe_ca.Infrastructure.Persistence.Interceptors;
 using Duende.IdentityServer.EntityFramework.Options;
 using MediatR;
 using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using se22m060_swe_ca.Application.TodoLists.Queries.GetTodos;
 
-namespace CleanArchitecture.Infrastructure.Persistence;
+namespace se22m060_swe_ca.Infrastructure.Persistence;
 
 public class ApplicationDbContext : ApiAuthorizationDbContext<ApplicationUser>, IApplicationDbContext
 {
@@ -30,6 +31,8 @@ public class ApplicationDbContext : ApiAuthorizationDbContext<ApplicationUser>, 
     public DbSet<TodoList> TodoLists => Set<TodoList>();
 
     public DbSet<TodoItem> TodoItems => Set<TodoItem>();
+
+    public DbSet<Food> FoodItems => Set<Food>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-      <RootNamespace>CleanArchitecture.WebUI.AcceptanceTests</RootNamespace>
-      <AssemblyName>CleanArchitecture.WebUI.AcceptanceTests</AssemblyName>
+      <RootNamespace>se22m060_swe_ca.WebUI.AcceptanceTests</RootNamespace>
+      <AssemblyName>se22m060_swe_ca.WebUI.AcceptanceTests</AssemblyName>
       <Nullable>enable</Nullable>
       <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>

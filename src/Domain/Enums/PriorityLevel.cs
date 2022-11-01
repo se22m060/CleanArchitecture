@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.Domain.Enums;
+﻿namespace se22m060_swe_ca.Domain.Enums;
 
 public enum PriorityLevel
 {

@@ -1,5 +1,5 @@
-﻿using CleanArchitecture.Application.Common.Interfaces;
-using CleanArchitecture.Infrastructure.Persistence;
+﻿using se22m060_swe_ca.Application.Common.Interfaces;
+using se22m060_swe_ca.Infrastructure.Persistence;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Moq;
 
-namespace CleanArchitecture.Application.IntegrationTests;
+namespace se22m060_swe_ca.Application.IntegrationTests;
 
 using static Testing;
 

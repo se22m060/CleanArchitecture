@@ -2,8 +2,8 @@
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
-        <RootNamespace>CleanArchitecture.WebUI</RootNamespace>
-        <AssemblyName>CleanArchitecture.WebUI</AssemblyName>
+        <RootNamespace>se22m060_swe_ca.WebUI</RootNamespace>
+        <AssemblyName>se22m060_swe_ca.WebUI</AssemblyName>
         <Nullable>enable</Nullable>
         <IsPackable>true</IsPackable>
         <ImplicitUsings>enable</ImplicitUsings>
@@ -18,7 +18,9 @@
     <ItemGroup>
         <PackageReference Include="FluentValidation.AspNetCore" Version="10.3.4" />
         <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.5" />
+        <PackageReference Include="Microsoft.AspNetCore.SpaProxy" Version="6.0.5" />
         <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" Version="6.0.5" />
+        <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
         <PackageReference Include="NSwag.AspNetCore" Version="13.16.0" />
         <PackageReference Include="NSwag.MSBuild" Version="13.16.0">
             <PrivateAssets>all</PrivateAssets>
@@ -28,9 +30,13 @@
 
     <PropertyGroup>
         <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <DockerfileContext>..\..</DockerfileContext>
     </PropertyGroup>
 
     <Target Name="NSwag" AfterTargets="PostBuildEvent" Condition=" '$(Configuration)' == 'Debug' ">
         <Exec WorkingDirectory="$(ProjectDir)" EnvironmentVariables="ASPNETCORE_ENVIRONMENT=Development" Command="$(NSwagExe_Net60) run nswag.json /variables:Configuration=$(Configuration)" />
     </Target>
+
+    <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 </Project>

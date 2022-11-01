@@ -1,10 +1,10 @@
-﻿using CleanArchitecture.Domain.Entities;
-using CleanArchitecture.Infrastructure.Identity;
+﻿using se22m060_swe_ca.Domain.Entities;
+using se22m060_swe_ca.Infrastructure.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
-namespace CleanArchitecture.Infrastructure.Persistence;
+namespace se22m060_swe_ca.Infrastructure.Persistence;
 
 public class ApplicationDbContextInitialiser
 {

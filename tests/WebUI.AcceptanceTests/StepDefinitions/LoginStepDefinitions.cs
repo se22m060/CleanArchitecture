@@ -1,4 +1,4 @@
-namespace CleanArchitecture.WebUI.AcceptanceTests.StepDefinitions;
+namespace se22m060_swe_ca.WebUI.AcceptanceTests.StepDefinitions;
 
 [Binding]
 public sealed class LoginStepDefinitions
@@ -17,10 +17,6 @@ public sealed class LoginStepDefinitions
 
         var options = new BrowserTypeLaunchOptions();
 
-#if DEBUG
-        options.Headless = false;
-        options.SlowMo = 500;
-#endif
 
         var browser = await playwright.Chromium.LaunchAsync(options);
 

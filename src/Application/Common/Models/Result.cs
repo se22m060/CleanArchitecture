@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.Application.Common.Models;
+﻿namespace se22m060_swe_ca.Application.Common.Models;
 
 public class Result
 {

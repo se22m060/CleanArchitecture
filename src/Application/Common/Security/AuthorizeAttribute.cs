@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.Application.Common.Security;
+﻿namespace se22m060_swe_ca.Application.Common.Security;
 
 /// <summary>
 /// Specifies the class this attribute is applied to requires authorization.

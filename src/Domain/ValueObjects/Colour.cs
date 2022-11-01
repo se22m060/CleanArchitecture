@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.Domain.ValueObjects;
+﻿namespace se22m060_swe_ca.Domain.ValueObjects;
 
 public class Colour : ValueObject
 {

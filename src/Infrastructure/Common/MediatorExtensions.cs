@@ -1,4 +1,4 @@
-﻿using CleanArchitecture.Domain.Common;
+﻿using se22m060_swe_ca.Domain.Common;
 using Microsoft.EntityFrameworkCore;
 
 namespace MediatR;

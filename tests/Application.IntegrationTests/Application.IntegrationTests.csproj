@@ -2,8 +2,8 @@
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
-        <RootNamespace>CleanArchitecture.Application.IntegrationTests</RootNamespace>
-        <AssemblyName>CleanArchitecture.Application.IntegrationTests</AssemblyName>
+        <RootNamespace>se22m060_swe_ca.Application.IntegrationTests</RootNamespace>
+        <AssemblyName>se22m060_swe_ca.Application.IntegrationTests</AssemblyName>
 
         <IsPackable>false</IsPackable>
         <ImplicitUsings>enable</ImplicitUsings>

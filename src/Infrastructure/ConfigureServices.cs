@@ -1,9 +1,9 @@
-﻿using CleanArchitecture.Application.Common.Interfaces;
-using CleanArchitecture.Infrastructure.Files;
-using CleanArchitecture.Infrastructure.Identity;
-using CleanArchitecture.Infrastructure.Persistence;
-using CleanArchitecture.Infrastructure.Persistence.Interceptors;
-using CleanArchitecture.Infrastructure.Services;
+﻿using se22m060_swe_ca.Application.Common.Interfaces;
+using se22m060_swe_ca.Infrastructure.Files;
+using se22m060_swe_ca.Infrastructure.Identity;
+using se22m060_swe_ca.Infrastructure.Persistence;
+using se22m060_swe_ca.Infrastructure.Persistence.Interceptors;
+using se22m060_swe_ca.Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -20,7 +20,7 @@ public static class ConfigureServices
         if (configuration.GetValue<bool>("UseInMemoryDatabase"))
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseInMemoryDatabase("CleanArchitectureDb"));
+                options.UseInMemoryDatabase("se22m060_swe_caDb"));
         }
         else
         {
@@ -45,8 +45,12 @@ public static class ConfigureServices
         services.AddTransient<IIdentityService, IdentityService>();
         services.AddTransient<ICsvFileBuilder, CsvFileBuilder>();
 
-        services.AddAuthentication()
-            .AddIdentityServerJwt();
+        services.AddAuthentication(options =>
+        {
+            options.DefaultAuthenticateScheme = "Anonymous";
+            options.DefaultChallengeScheme = "Anonymous";
+            options.DefaultScheme = "Anonymous";
+        });
 
         services.AddAuthorization(options =>
             options.AddPolicy("CanPurge", policy => policy.RequireRole("Administrator")));

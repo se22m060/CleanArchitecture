@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.Application.Common.Interfaces;
+﻿namespace se22m060_swe_ca.Application.Common.Interfaces;
 
 public interface ICurrentUserService
 {

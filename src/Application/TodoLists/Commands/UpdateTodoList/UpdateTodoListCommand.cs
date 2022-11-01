@@ -1,9 +1,9 @@
-﻿using CleanArchitecture.Application.Common.Exceptions;
-using CleanArchitecture.Application.Common.Interfaces;
-using CleanArchitecture.Domain.Entities;
+﻿using se22m060_swe_ca.Application.Common.Exceptions;
+using se22m060_swe_ca.Application.Common.Interfaces;
+using se22m060_swe_ca.Domain.Entities;
 using MediatR;
 
-namespace CleanArchitecture.Application.TodoLists.Commands.UpdateTodoList;
+namespace se22m060_swe_ca.Application.TodoLists.Commands.UpdateTodoList;
 
 public record UpdateTodoListCommand : IRequest
 {

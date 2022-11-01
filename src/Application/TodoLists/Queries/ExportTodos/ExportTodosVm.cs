@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.Application.TodoLists.Queries.ExportTodos;
+﻿namespace se22m060_swe_ca.Application.TodoLists.Queries.ExportTodos;
 
 public class ExportTodosVm
 {

@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.Application.TodoLists.Queries.GetTodos;
+﻿namespace se22m060_swe_ca.Application.TodoLists.Queries.GetTodos;
 
 public class TodosVm
 {

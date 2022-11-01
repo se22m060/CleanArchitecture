@@ -1,6 +1,6 @@
-﻿using CleanArchitecture.Application.Common.Models;
+﻿using se22m060_swe_ca.Application.Common.Models;
 
-namespace CleanArchitecture.Application.Common.Interfaces;
+namespace se22m060_swe_ca.Application.Common.Interfaces;
 
 public interface IIdentityService
 {

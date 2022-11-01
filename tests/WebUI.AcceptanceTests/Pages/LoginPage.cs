@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.WebUI.AcceptanceTests.Pages;
+﻿namespace se22m060_swe_ca.WebUI.AcceptanceTests.Pages;
 
 public class LoginPage : BasePage
 {

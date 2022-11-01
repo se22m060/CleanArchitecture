@@ -1,7 +1,7 @@
-﻿using CleanArchitecture.Application.Common.Interfaces;
-using CleanArchitecture.Infrastructure.Persistence;
-using CleanArchitecture.WebUI.Filters;
-using CleanArchitecture.WebUI.Services;
+﻿using se22m060_swe_ca.Application.Common.Interfaces;
+using se22m060_swe_ca.Infrastructure.Persistence;
+using se22m060_swe_ca.WebUI.Filters;
+using se22m060_swe_ca.WebUI.Services;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Mvc;
 using NSwag;
@@ -34,7 +34,7 @@ public static class ConfigureServices
 
         services.AddOpenApiDocument(configure =>
         {
-            configure.Title = "CleanArchitecture API - Luputan";
+            configure.Title = "se22m060_swe_ca API";
             configure.AddSecurity("JWT", Enumerable.Empty<string>(), new OpenApiSecurityScheme
             {
                 Type = OpenApiSecuritySchemeType.ApiKey,

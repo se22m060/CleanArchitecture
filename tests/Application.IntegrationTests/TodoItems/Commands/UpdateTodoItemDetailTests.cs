@@ -1,14 +1,14 @@
-﻿using CleanArchitecture.Application.Common.Exceptions;
-using CleanArchitecture.Application.TodoItems.Commands.CreateTodoItem;
-using CleanArchitecture.Application.TodoItems.Commands.UpdateTodoItem;
-using CleanArchitecture.Application.TodoItems.Commands.UpdateTodoItemDetail;
-using CleanArchitecture.Application.TodoLists.Commands.CreateTodoList;
-using CleanArchitecture.Domain.Entities;
-using CleanArchitecture.Domain.Enums;
+﻿using se22m060_swe_ca.Application.Common.Exceptions;
+using se22m060_swe_ca.Application.TodoItems.Commands.CreateTodoItem;
+using se22m060_swe_ca.Application.TodoItems.Commands.UpdateTodoItem;
+using se22m060_swe_ca.Application.TodoItems.Commands.UpdateTodoItemDetail;
+using se22m060_swe_ca.Application.TodoLists.Commands.CreateTodoList;
+using se22m060_swe_ca.Domain.Entities;
+using se22m060_swe_ca.Domain.Enums;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace CleanArchitecture.Application.IntegrationTests.TodoItems.Commands;
+namespace se22m060_swe_ca.Application.IntegrationTests.TodoItems.Commands;
 
 using static Testing;
 

@@ -1,12 +1,12 @@
-﻿using CleanArchitecture.Application.TodoLists.Commands.CreateTodoList;
-using CleanArchitecture.Application.TodoLists.Commands.DeleteTodoList;
-using CleanArchitecture.Application.TodoLists.Commands.UpdateTodoList;
-using CleanArchitecture.Application.TodoLists.Queries.ExportTodos;
-using CleanArchitecture.Application.TodoLists.Queries.GetTodos;
+﻿using se22m060_swe_ca.Application.TodoLists.Commands.CreateTodoList;
+using se22m060_swe_ca.Application.TodoLists.Commands.DeleteTodoList;
+using se22m060_swe_ca.Application.TodoLists.Commands.UpdateTodoList;
+using se22m060_swe_ca.Application.TodoLists.Queries.ExportTodos;
+using se22m060_swe_ca.Application.TodoLists.Queries.GetTodos;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CleanArchitecture.WebUI.Controllers;
+namespace se22m060_swe_ca.WebUI.Controllers;
 
 [Authorize]
 public class TodoListsController : ApiControllerBase
