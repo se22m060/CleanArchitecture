@@ -14,17 +14,17 @@ public static class ConfigureServices
     {
         services.AddScoped<AuditableEntitySaveChangesInterceptor>();
 
-        if (configuration.GetValue<bool>("UseInMemoryDatabase"))
-        {
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseInMemoryDatabase("se22m060_swe_caDb"));
-        }
-        else
-        {
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(configuration.GetConnectionString("sqlserver"),
-                    builder => builder.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
-        }
+        //if (configuration.GetValue<bool>("UseInMemoryDatabase"))
+        //{
+        services.AddDbContext<ApplicationDbContext>(options => options.UseInMemoryDatabase("se22m060_swe_caDb"));
+
+        //}
+        //else
+        //{
+        //    services.AddDbContext<ApplicationDbContext>(options =>
+        //        options.UseSqlServer(configuration.GetConnectionString("sqlserver"),
+        //            builder => builder.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
+        //}
 
         services.AddScoped<IApplicationDbContext>(provider => provider.GetRequiredService<ApplicationDbContext>());
 
